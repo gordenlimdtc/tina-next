@@ -17,13 +17,9 @@ const config = defineConfig({
   authProvider: isLocal ? new LocalAuthProvider() : new UsernamePasswordAuthJSProvider(),
   contentApiUrlOverride: '/api/tina/gql',
   media: {
-    // loadCustomStore: async () => {
-    //   const pack = await import("next-tinacms-cloudinary");
-    //   return pack.TinaCloudCloudinaryMediaStore;
-    // },
-    tina: {
-      publicFolder: 'public',
-      mediaRoot: 'uploads',
+    loadCustomStore: async () => {
+      const pack = await import('next-tinacms-cloudinary');
+      return pack.CloudinaryMediaStore;
     },
   },
   build: {
