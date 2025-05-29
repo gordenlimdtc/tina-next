@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  outputFileTracingIncludes: {
+    '/api/tina/backend': ['/tina/__generated__/**/*'],
+    '/api/cloudinary/[...media]': ['/tina/__generated__/**/*'],
+  },
   async rewrites() {
     return [
       {

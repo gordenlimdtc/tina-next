@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/tina/backend.ts": {
+      "includeFiles": "tina/__generated__/**"
+    },
+    "api/cloudinary/[...media].ts": {
+      "includeFiles": "tina/__generated__/**"
+    }
+  },
   "headers": [
     {
       "source": "/_astro/(.*)",
