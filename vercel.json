@@ -3,15 +3,15 @@
   "trailingSlash": false,
   "functions": {
     "api/tina/backend.ts": {
-      "includeFiles": "tina/__generated__/**"
+      "includeFiles": "./tina/**"
     },
     "api/cloudinary/[...media].ts": {
-      "includeFiles": "tina/__generated__/**"
+      "includeFiles": "./tina/**"
     }
   },
   "headers": [
     {
-      "source": "/_astro/(.*)",
+      "source": "/_next/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
