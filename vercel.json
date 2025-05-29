@@ -1,12 +1,11 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install",
   "functions": {
-    "api/tina/backend.ts": {
-      "includeFiles": "./tina/**"
-    },
-    "api/cloudinary/[...media].ts": {
-      "includeFiles": "./tina/**"
+    "api/**/*": {
+      "includeFiles": "./tina/**/*"
     }
   },
   "headers": [

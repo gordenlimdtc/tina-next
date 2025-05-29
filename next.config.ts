@@ -7,8 +7,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   outputFileTracingIncludes: {
-    '/api/tina/backend': ['./tina/**/*'],
-    '/api/cloudinary/[...media]': ['./tina/**/*'],
+    '/api/**/*': ['./tina/**/*'],
   },
   async rewrites() {
     return [
