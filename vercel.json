@@ -1,13 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "buildCommand": "pnpm run build",
-  "installCommand": "pnpm install",
-  "functions": {
-    "api/**/*": {
-      "includeFiles": "./tina/**/*"
-    }
-  },
   "headers": [
     {
       "source": "/_next/(.*)",
@@ -17,12 +10,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/tina/:path*",
-      "destination": "/api/tina/backend"
     }
   ]
 }
